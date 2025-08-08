@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favi.png" type="image/x-icon">
+    <script src="https://unpkg.com/@tailwindcss/browser@4.0.17/dist/index.global.js"></script>
+    <style>
+        @keyframes rotate360 {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(350deg);
+            }
+        }
+
+        .rotate-animation {
+            animation: rotate360 5s linear forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Fullscreen popup -->
+    <div id="popup" class="fixed top-0 left-0 w-full h-full bg-white z-50 flex items-center justify-center">
+        <div class="w-16 h-16 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
+    </div>
+
+    <!-- Main Content -->
+    <header class="bg-[#252F39]">
+        <div class="md:w-[80%] mx-auto md:flex justify-between py-2">
+            <img src="./assets/Norton_av_logo.png" alt="">
+        </div>
+    </header>
+
+    <section class="p-3 flex flex-col justify-between items-center gap-4">
+        <p class="text-center text-2xl md:text-4xl text-gray-900">Error <span class="text-red-600">"NOR361P"</span>
+            Unable to Setup Product</p>
+        <p class="text-center text-lg font-semibold md:text-2xl text-gray-900">Your key is redeemed successfully but the
+            setup cannot be started</p>
+        <p class="text-center text-lg md:text-2xl text-red-900">Do not refresh or close the page you might lose your
+            product key</p>
+        <p class="text-center md:text-2xl text-gray-900">You will get a call from our support representative shortly,
+            If you cannot wait we recommend<br class="hidden md:block"> you to contact our chat support now</p>
+        <p class="text-center text-2xl md:text-4xl text-gray-900">Contact Customer Support</p>
+        <p class="text-center text-2xl font-semibold md:text-4xl text-gray-900">
+            <a href="tel:+1(888)-768-3078">+1(888)-768-3078</a>
+        </p>
+    </section>
+
+    <section class="flex flex-col justify-between items-center gap-6 pb-10">
+        <div class="md:w-1/6">
+            <a href="tel:+1(888)-768-3078">
+                <img src="./assets/login-cus.png" alt="login-cus">
+            </a>
+        </div>
+        <div class="md:w-1/2 text-gray-500">
+            <p class="text-center text-xs">© 2019–2019 NortonLifeLock Inc. All rights reserved. NortonLifeLock, the
+                NortonLifeLock Logo, the Checkmark Logo, Norton, LifeLock, and the LockMan Logo are trademarks or
+                registered
+                trademarks of NortonLifeLock Inc. or its affiliates in the United States and other countries. Other
+                names may
+                be trademarks of their respective owners.</p>
+        </div>
+        <div class="md:w-1/2 text-gray-900 border-b border-t border-gray-300 py-6">
+            <p class="text-center text-xs">English | Legal Notices | License Agreement | Privacy Policy | Support Policy
+                |
+                Careers | Cookies | System Status</p>
+        </div>
+        <div class="md:w-1/2 text-gray-900 flex justify-center items-center">
+            <div class="w-1/4 lg:w-1/9">
+                <img class="hidden md:block" src="./assets/sy.png" alt="sy">
+            </div>
+            <div>
+                <p class="text-center text-xs">Copyright © 2019 NortonLifeLock Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auto-hide popup script -->
+    <script>
+        setTimeout(() => {
+            document.getElementById("popup").style.display = "none";
+        }, 5000);
+    </script>
+</body>
+
+</html>
